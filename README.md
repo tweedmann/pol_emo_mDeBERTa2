@@ -1,8 +1,4 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
+
 
 **pol_emo_mDeBERTa2: Discrete-Emotional-Classifier**
 
