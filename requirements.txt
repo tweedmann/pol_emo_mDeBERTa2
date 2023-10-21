@@ -1,0 +1,6 @@
+pandas==2.0.0
+tqdm==4.65.1
+torch==2.0.1
+transformers==4.33.2
+pytorch-lightning==1.9.4
+sentencepiece==0.1.99
