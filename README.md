@@ -245,7 +245,7 @@ input_df
 ```
 
 ``` python
-# putting model into evaluation mode
+# putting model into evaluation mode and load local fine-tuned model
 model = CrowdCodedTagger(n_classes=8)
 model.load_state_dict(torch.load("./model/pytorch_model.pt"), strict = False)
 model.to(device)

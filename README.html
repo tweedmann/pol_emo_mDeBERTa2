@@ -680,7 +680,7 @@ def predict_labels(df):
 #by default, the column in the dataframe including sentences to be classified should be called &quot;sentence&quot; (can be adjusted above)
 input_df = pd.read_csv(&quot;./example_data.csv&quot;)
 input_df</code></pre>
-<pre class="python"><code># putting model into evaluation mode
+<pre class="python"><code># putting model into evaluation mode and load local fine-tuned model
 model = CrowdCodedTagger(n_classes=8)
 model.load_state_dict(torch.load(&quot;./model/pytorch_model.pt&quot;), strict = False)
 model.to(device)
