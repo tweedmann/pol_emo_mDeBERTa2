@@ -23,7 +23,7 @@ set of crowd-coded data: 19620 sentences from political communication.
 Furthermore, the base model used is a **multilingual mDeBERTa** trained
 on data from 100 languages
 ([mDeBERTa-v3-base](https://huggingface.co/microsoft/mdeberta-v3-base)
-from Microsoft). **Thus, in comparison to the model presented in the paper, the fine-tuned model pol_emo_mDeBERTa2, can be applied to more
+from Microsoft). **Thus, in comparison to the model presented in the paper, the fine-tuned model pol_emo_mDeBERTa2, can be used to more
 languages than German.**
 
 You can learn more about the efficiency of DeBERTa using ELECTRA-Style
@@ -32,7 +32,7 @@ pre-training with Gradient Disentangled Embedding Sharing in their
 about the CC100 dataset that has been used to train the base model
 [here](https://arxiv.org/pdf/1911.02116v2.pdf).
 
-The model classifies text into to the following eight emotions:
+The model classifies text according to the following eight emotions:
 **anger, fear, disgust, sadness, joy, enthusiasm, pride, and hope**.
 
 Python code is provided below.
@@ -55,7 +55,7 @@ and F1 scores.
 | hope       | 0.647     | 0.603  |   0.62   |
 | Macro Avg  | 0.741     | 0.716  |  0.724   |
 
-In addition, to test its applicability to other languages than German, I applied the model to more than 1,200 test sentences in English, Spanish, and French. The sentences have been created by an generative AI model, resembling stereotypical statements from political communication (with and without discrete emotional appeals). The performance metrics for this exercise can be seen below. As indicated, the model achieves high performance in languages other than German:
+In addition, to test is applicability to other languages than German, I applied the model to more than 1,200 test sentences in English, Spanish, and French. The sentences have been created by an generative AI model, resembling stereotypical statements from political communication (with and without discrete emotional appeals). The performance metrics for this exercise can be seen below. As indicated, the model achieves high performance in languages other than German:
 
 | Emotion    | Precision | Recall | F1 Score |
 |------------|-----------|--------|----------|
