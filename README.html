@@ -369,14 +369,14 @@ set of crowd-coded data: 19620 sentences from political communication.
 Furthermore, the base model used is a <strong>multilingual
 mDeBERTa</strong> trained on data from 100 languages (<a href="https://huggingface.co/microsoft/mdeberta-v3-base">mDeBERTa-v3-base</a>
 from Microsoft). <strong>Thus, in comparison to the model presented in
-the paper, the fine-tuned model pol_emo_mDeBERTa2, can be used to more
-languages than German.</strong></p>
+the paper, the fine-tuned model pol_emo_mDeBERTa2, can be applied to
+more languages than German.</strong></p>
 <p>You can learn more about the efficiency of DeBERTa using
 ELECTRA-Style pre-training with Gradient Disentangled Embedding Sharing
 in their <a href="https://arxiv.org/abs/2111.09543">research paper</a>.
 You can learn more about the CC100 dataset that has been used to train
 the base model <a href="https://arxiv.org/pdf/1911.02116v2.pdf">here</a>.</p>
-<p>The model classifies text according to the following eight emotions:
+<p>The model classifies text into to the following eight emotions:
 <strong>anger, fear, disgust, sadness, joy, enthusiasm, pride, and
 hope</strong>.</p>
 <p>Python code is provided below.</p>
@@ -450,13 +450,13 @@ recall, and F1 scores.</p>
 </tr>
 </tbody>
 </table>
-<p>In addition, to test is applicability to other languages than German,
-I applied the model to more than 1,200 test sentences in English,
-Spanish, and French. The sentences have been created by an generative AI
-model, resembling stereotypical statements from political communication
-(with and without discrete emotional appeals). The performance metrics
-for this exercise can be seen below. As indicated, the model achieves
-high performance in languages other than German:</p>
+<p>In addition, to test its applicability to other languages than
+German, I applied the model to more than 1,200 test sentences in
+English, Spanish, and French. The sentences have been created by an
+generative AI model, resembling stereotypical statements from political
+communication (with and without discrete emotional appeals). The
+performance metrics for this exercise can be seen below. As indicated,
+the model achieves high performance in languages other than German:</p>
 <table>
 <thead>
 <tr class="header">
@@ -555,7 +555,7 @@ import pandas as pd
 <pre class="python"><code>#set working directory to the downloaded folder
 import os
 os.chdir(&#39;/path/to/your/directory&#39;)</code></pre>
-<pre class="python"><code>#define function to apply mDeBERTa model
+<pre class="python"><code>#define functions necessary to apply mDeBERTa model
 LABEL_COLUMNS = [&#39;anger_v2&#39;, &#39;fear_v2&#39;, &#39;disgust_v2&#39;, &#39;sadness_v2&#39;, &#39;joy_v2&#39;, &#39;enthusiasm_v2&#39;, &#39;pride_v2&#39;, &#39;hope_v2&#39;]
 BASE_MODEL_NAME = &quot;microsoft/mdeberta-v3-base&quot;
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
